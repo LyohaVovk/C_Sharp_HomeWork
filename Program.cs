@@ -5,4 +5,15 @@ a = -9 b = -3 -> max = -3
 */
 Console.WriteLine("Давайте сравним два числа!");
 Console.WriteLine("Введите первое число: ");
-int iFirstNumber = int.Parse(Console.ReadLine());
+int iFirstNumber = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите второе число: ");
+int iSecondNumber = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Теперь сравним эти числа!");
+Console.WriteLine("Нажмите любую клавишу для продолжения: ");
+Console.ReadLine();
+if (iFirstNumber > iSecondNumber)
+    Console.WriteLine($"Число {iFirstNumber} больше, чем число {iSecondNumber}");
+else
+    Console.WriteLine($"Число {iSecondNumber} больше, чем число {iFirstNumber}");
+
+Console.WriteLine("Спасибо за внимание :)");
