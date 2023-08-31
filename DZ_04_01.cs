@@ -8,20 +8,25 @@ int GetNumber(string message)
     return int.Parse(Console.ReadLine()!); 
 }
 
+void Exp(int firstNumber, int secondNumber)
+{
+    int result = firstNumber;
+    if (result == 0)
+        Console.WriteLine($"{firstNumber} в степени {secondNumber} = 0");
+    else if (result == 0)
+        Console.WriteLine($"{firstNumber} в степени {secondNumber} = 1"); 
+    else
+    {
+        
+        for (int i = 2; i <= secondNumber; i++)
+        {
+            result *= firstNumber;
+        }
+    }   
+    Console.WriteLine($"{firstNumber} в степени {secondNumber} = {result}");
+}
+
 int firstNumber = GetNumber("Введите число, которое нужно возвести в степень: ");
 int secondNumber = GetNumber("Задайте степень, в которую нужно возвести число: ");
 
-int result = firstNumber;
-if (result == 0)
-    Console.WriteLine($"{firstNumber} в степени {secondNumber} = 0");
-else if (result == 0)
-    Console.WriteLine($"{firstNumber} в степени {secondNumber} = 1"); 
-else
-{
-    
-    for (int i = 2; i <= secondNumber; i++)
-    {
-        result *= firstNumber;
-    }
-}   
-Console.WriteLine($"{firstNumber} в степени {secondNumber} = {result}");
+Exp(firstNumber, secondNumber);
